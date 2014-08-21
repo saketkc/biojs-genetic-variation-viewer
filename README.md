@@ -23,6 +23,6 @@ BioJS Component for visualising human gentic variations, GSoC2014
 # Open view with Zoom
 ![Open View + Zoom enabled](./images/openwithzoomed.png?raw=true “Open view with Zoom enabled”)
 # Hide Benign Mutations in Zoomed view
-![Hide benign mutations](./images/openwithzoomed.png?raw=true “Hide Benign Mutations”)
+![Hide benign mutations](./images/removebenign.png?raw=true “Hide Benign Mutations”)
 # Use only SIFT scores for calculating class of mutation
 ![Use only SIFT](./images/onlysift.png?raw=true “Use only SIFT”)
