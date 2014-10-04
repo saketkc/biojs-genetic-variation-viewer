@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{Smigielski2000}
+E.~M. Smigielski, K.~Sirotkin, M.~Ward, and S.~T. Sherry, ``{dbSNP: a database
+  of single nucleotide polymorphisms.},'' {\em Nucleic acids research},
+  vol.~28, pp.~352--5, Jan. 2000.
+
+\bibitem{Forbes2011}
+S.~a. Forbes, N.~Bindal, S.~Bamford, C.~Cole, C.~Y. Kok, D.~Beare, M.~Jia,
+  R.~Shepherd, K.~Leung, A.~Menzies, J.~W. Teague, P.~J. Campbell, M.~R.
+  Stratton, and P.~A. Futreal, ``{COSMIC: mining complete cancer genomes in the
+  Catalogue of Somatic Mutations in Cancer.},'' {\em Nucleic acids research},
+  vol.~39, pp.~D945--50, Jan. 2011.
+
+\bibitem{ncbiweb}
+``dbsnp data statistics.''
+  \url{http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm}.
+\newblock Accessed: 2014-10-04.
+
+\bibitem{Corpas2014}
+M.~Corpas, ``{The BioJS article collection of open source components for
+  biological data visualisation},'' {\em F1000Research}, vol.~56, pp.~6--8,
+  Feb. 2014.
+
+\end{thebibliography}
