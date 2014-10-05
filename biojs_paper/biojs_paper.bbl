@@ -6,9 +6,7 @@ E.~M. Smigielski, K.~Sirotkin, M.~Ward, and S.~T. Sherry, ``{dbSNP: a database
   vol.~28, pp.~352--5, Jan. 2000.
 
 \bibitem{Forbes2011}
-S.~a. Forbes, N.~Bindal, S.~Bamford, C.~Cole, C.~Y. Kok, D.~Beare, M.~Jia,
-  R.~Shepherd, K.~Leung, A.~Menzies, J.~W. Teague, P.~J. Campbell, M.~R.
-  Stratton, and P.~A. Futreal, ``{COSMIC: mining complete cancer genomes in the
+S.~a. Forbes {\em et~al.}, ``{COSMIC: mining complete cancer genomes in the
   Catalogue of Somatic Mutations in Cancer.},'' {\em Nucleic acids research},
   vol.~39, pp.~D945--50, Jan. 2011.
 
@@ -21,5 +19,28 @@ S.~a. Forbes, N.~Bindal, S.~Bamford, C.~Cole, C.~Y. Kok, D.~Beare, M.~Jia,
 M.~Corpas, ``{The BioJS article collection of open source components for
   biological data visualisation},'' {\em F1000Research}, vol.~56, pp.~6--8,
   Feb. 2014.
+
+\bibitem{Wu2006}
+C.~H. Wu, R.~Apweiler, {\em et~al.}, ``{The Universal Protein Resource
+  (UniProt): an expanding universe of protein information.},'' {\em Nucleic
+  acids research}, vol.~34, pp.~D187--91, Jan. 2006.
+
+\bibitem{json}
+``Javascript object notation.'' \url{http://www.json.org/}.
+\newblock Accessed: 2014-10-04.
+
+\bibitem{vcf}
+``Vcf (variant call format) version 4.1.''
+  \url{http://www.1000genomes.org/wiki/analysis/variant%20call%20format/vcf-variant-call-format-version-41}.
+\newblock Accessed: 2014-10-04.
+
+\bibitem{Ramensky2002}
+V.~Ramensky, P.~Bork, and S.~Sunyaev, ``{Human non-synonymous SNPs: server and
+  survey.},'' {\em Nucleic acids research}, vol.~30, pp.~3894--900, Sept. 2002.
+
+\bibitem{Kumar2009}
+P.~Kumar, S.~Henikoff, and P.~C. Ng, ``{Predicting the effects of coding
+  non-synonymous variants on protein function using the SIFT algorithm.},''
+  {\em Nature protocols}, vol.~4, pp.~1073--81, Jan. 2009.
 
 \end{thebibliography}

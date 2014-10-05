@@ -34,9 +34,10 @@
  year = {2000}
  }
  
+ 
  @article{Forbes2011,
  abstract = {COSMIC (http://www.sanger.ac.uk/cosmic) curates comprehensive information on somatic mutations in human cancer. Release v48 (July 2010) describes over 136,000 coding mutations in almost 542,000 tumour samples; of the 18,490 genes documented, 4803 (26\%) have one or more mutations. Full scientific literature curations are available on 83 major cancer genes and 49 fusion gene pairs (19 new cancer genes and 30 new fusion pairs this year) and this number is continually increasing. Key amongst these is TP53, now available through a collaboration with the IARC p53 database. In addition to data from the Cancer Genome Project (CGP) at the Sanger Institute, UK, and The Cancer Genome Atlas project (TCGA), large systematic screens are also now curated. Major website upgrades now make these data much more mineable, with many new selection filters and graphics. A Biomart is now available allowing more automated data mining and integration with other biological databases. Annotation of genomic features has become a significant focus; COSMIC has begun curating full-genome resequencing experiments, developing new web pages, export formats and graphics styles. With all genomic information recently updated to GRCh37, COSMIC integrates many diverse types of mutation information and is making much closer links with Ensembl and other data resources.},
- author = {Forbes, Simon a and Bindal, Nidhi and Bamford, Sally and Cole, Charlotte and Kok, Chai Yin and Beare, David and Jia, Mingming and Shepherd, Rebecca and Leung, Kenric and Menzies, Andrew and Teague, Jon W and Campbell, Peter J and Stratton, Michael R and Futreal, P Andrew},
+ author = {Forbes, Simon a and others},
  doi = {10.1093/nar/gkq929},
  file = {:home/saket/Desktop/gkq929.pdf:pdf},
  issn = {1362-4962},
@@ -76,5 +77,71 @@ url = {http://f1000research.com/articles/3-56/v1},
 volume = {56},
 year = {2014}
 }
+@article{Wu2006,
+abstract = {The Universal Protein Resource (UniProt) provides a central resource on protein sequences and functional annotation with three database components, each addressing a key need in protein bioinformatics. The UniProt Knowledgebase (UniProtKB), comprising the manually annotated UniProtKB/Swiss-Prot section and the automatically annotated UniProtKB/TrEMBL section, is the preeminent storehouse of protein annotation. The extensive cross-references, functional and feature annotations and literature-based evidence attribution enable scientists to analyse proteins and query across databases. The UniProt Reference Clusters (UniRef) speed similarity searches via sequence space compression by merging sequences that are 100\% (UniRef100), 90\% (UniRef90) or 50\% (UniRef50) identical. Finally, the UniProt Archive (UniParc) stores all publicly available protein sequences, containing the history of sequence data with links to the source databases. UniProt databases continue to grow in size and in availability of information. Recent and upcoming changes to database contents, formats, controlled vocabularies and services are described. New download availability includes all major releases of UniProtKB, sequence collections by taxonomic division and complete proteomes. A bibliography mapping service has been added, and an ID mapping service will be available soon. UniProt databases can be accessed online at http://www.uniprot.org or downloaded at ftp://ftp.uniprot.org/pub/databases/.},
+author = {Wu, Cathy H and Apweiler, Rolf and others},
+doi = {10.1093/nar/gkj161},
+file = {:home/saket/Desktop/gkj161.pdf:pdf},
+issn = {1362-4962},
+journal = {Nucleic acids research},
+keywords = {Databases, Protein,Internet,Proteins,Proteins: chemistry,Proteins: classification,Proteins: physiology,Proteome,Proteome: chemistry,Sequence Analysis, Protein,Systems Integration,User-Computer Interface},
+mendeley-groups = {BioJS Paper},
+month = jan,
+number = {Database issue},
+pages = {D187--91},
+pmid = {16381842},
+title = {{The Universal Protein Resource (UniProt): an expanding universe of protein information.}},
+url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1347523\&tool=pmcentrez\&rendertype=abstract},
+volume = {34},
+year = {2006}
+}
+
+@misc{json,
+  title = {JavaScript Object Notation},
+  howpublished = {\url{http://www.json.org/}},
+  note = {Accessed: 2014-10-04}
+}
+
+@misc{vcf,
+  title = {VCF (Variant Call Format) version 4.1},
+  howpublished = {\url{http://www.1000genomes.org/wiki/analysis/variant%20call%20format/vcf-variant-call-format-version-41}},
+  note = {Accessed: 2014-10-04}
+}
+@article{Ramensky2002,
+abstract = {Human single nucleotide polymorphisms (SNPs) represent the most frequent type of human population DNA variation. One of the main goals of SNP research is to understand the genetics of the human phenotype variation and especially the genetic basis of human complex diseases. Non-synonymous coding SNPs (nsSNPs) comprise a group of SNPs that, together with SNPs in regulatory regions, are believed to have the highest impact on phenotype. Here we present a World Wide Web server to predict the effect of an nsSNP on protein structure and function. The prediction method enabled analysis of the publicly available SNP database HGVbase, which gave rise to a dataset of nsSNPs with predicted functionality. The dataset was further used to compare the effect of various structural and functional characteristics of amino acid substitutions responsible for phenotypic display of nsSNPs. We also studied the dependence of selective pressure on the structural and functional properties of proteins. We found that in our dataset the selection pressure against deleterious SNPs depends on the molecular function of the protein, although it is insensitive to several other protein features considered. The strongest selective pressure was detected for proteins involved in transcription regulation.},
+author = {Ramensky, Vasily and Bork, Peer and Sunyaev, Shamil},
+file = {:home/saket/Desktop/nar-2002-3894.pdf:pdf},
+issn = {1362-4962},
+journal = {Nucleic acids research},
+keywords = {Databases, Genetic,Humans,Information Storage and Retrieval,Information Storage and Retrieval: methods,Internet,Mutation,Polymorphism, Single Nucleotide,Polymorphism, Single Nucleotide: genetics,Proteins,Proteins: genetics},
+mendeley-groups = {BioJS Paper},
+month = sep,
+number = {17},
+pages = {3894--900},
+pmid = {12202775},
+title = {{Human non-synonymous SNPs: server and survey.}},
+url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=137415\&tool=pmcentrez\&rendertype=abstract},
+volume = {30},
+year = {2002}
+}
+@article{Kumar2009,
+abstract = {The effect of genetic mutation on phenotype is of significant interest in genetics. The type of genetic mutation that causes a single amino acid substitution (AAS) in a protein sequence is called a non-synonymous single nucleotide polymorphism (nsSNP). An nsSNP could potentially affect the function of the protein, subsequently altering the carrier's phenotype. This protocol describes the use of the 'Sorting Tolerant From Intolerant' (SIFT) algorithm in predicting whether an AAS affects protein function. To assess the effect of a substitution, SIFT assumes that important positions in a protein sequence have been conserved throughout evolution and therefore substitutions at these positions may affect protein function. Thus, by using sequence homology, SIFT predicts the effects of all possible substitutions at each position in the protein sequence. The protocol typically takes 5-20 min, depending on the input. SIFT is available as an online tool (http://sift.jcvi.org).},
+author = {Kumar, Prateek and Henikoff, Steven and Ng, Pauline C},
+doi = {10.1038/nprot.2009.86},
+file = {:home/saket/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Kumar, Henikoff, Ng - 2009 - Predicting the effects of coding non-synonymous variants on protein function using the SIFT algorithm.pdf:pdf},
+issn = {1750-2799},
+journal = {Nature protocols},
+keywords = {Algorithms,Amino Acid Sequence,Amino Acid Substitution,Computer Simulation,Internet,Molecular Sequence Data,Phenotype,Proteins,Proteins: genetics,Proteins: physiology,Software},
+mendeley-groups = {Galaxy\_Stuff,BioJS Paper},
+month = jan,
+number = {7},
+pages = {1073--81},
+pmid = {19561590},
+title = {{Predicting the effects of coding non-synonymous variants on protein function using the SIFT algorithm.}},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/19561590},
+volume = {4},
+year = {2009}
+}
+
 
  
