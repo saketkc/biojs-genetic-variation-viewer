@@ -70,7 +70,7 @@ Biojs.HGVViewer = Biojs.extend(
     opt:{
         accession: null, //accession number of the protein to be fetched
         availableScores: {"SIFT": "siftScore", "Polyphen": "polyphenScore"},
-        baseUrl: "http://saketkc.github.io/biojs/src/main/resources/data/hgv/", //Base Url
+        baseUrl: "http://saket-choudhary.me/biojs/src/main/resources/data/hgv/", //Base Url
         height: 170, //SVG Height
         width: 800, //SVG Width
         target: "", //target div
