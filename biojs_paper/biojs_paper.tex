@@ -149,7 +149,8 @@ All the visualizations are rendered as scalable vector graphics(SVG) using the \
 
 
 \subsection{Overview Mode}
-In the default mode the viewer presents variant information in a condensed format focusing on the number and \textit{type of mutations} at each site. The \textit{type of mutations} are classified as:
+In the default mode the viewer presents variant information in a condensed format using a stacked bar char displaying the number and \textit{type of mutations} at each site. The detailed annotations are displayed on hovering over the rectangle as a \textit{tooltip}.
+The \textit{type of mutations} are classified as:
 \begin{compactitem}
 \item \textbf{Benign} %: Mutations that do not metastasize  and are virtually harmless 
 \item \textbf{Damaging} %: Mutations that lead to 
@@ -167,52 +168,12 @@ The data thus received is parsed for calculating the number of mutations in each
 %By default, the SIFT and Polyphen scores are averaged to generate a combined prediction score. 
 
 \subsection{Detailed View}
-In the detailed view\ref{zoomedtooltip} each individual amino acid on the protein is displayed as a rectangular box with all variants at that site. The box for variants is colored based on its type. On a \textit{mouse over} action at the variant box, the tooltip shows detailed information about that particular mutation.
-
-
-
-
-
-%\begin{figure*}
-%\includegraphics[width=\linewidth]{openview0}
-%\caption{'Overview' of genetic variants as shown in by HGV viewer}
-%\end{figure*}
-
-%\begin{figure*}
-%\includegraphics[width=\linewidth]{zoomed0}
-%\caption{'Detailed view' of genetic variants. The SIFT/Polyphen scores and associated information with the mutations is rendered using tooltips(not shown here)}
-%\end{figure*}
-
-
-
-
-
-%------------------------------------------------
-
-%\section{Results}
-
-%\begin{table}[H]
-%\caption{Example table}
-%\centering
-%\begin{tabular}{llr}
-%\toprule
-%\multicolumn{2}{c}{Name} \\
-%\cmidrule(r){1-2}
-%First name & Last Name & Grade \\
-%\midrule
-%John & Doe & $7.5$ \\
-%Richard & Miles & $2$ \\
-%\bottomrule
-%\end{tabular}
-%\end{table}
-
+In the detailed view\ref{zoomedtooltip} each individual amino acid on the protein is displayed as a rectangular box with all variants at that site, the height of the rectangle being proportional to the reported frequency. The box for variants is colored based on its type. On a \textit{mouse over} action at the variant box, the tooltip shows detailed information about that particular mutation.
 
 %------------------------------------------------
 
 \section{Discussion}
-
-BioJS-HGV Viewer can be used to study the pattern of mutations. A visual inspection can help discover sites of conserved regions or regions which are frequently mutated. 
-Being entirely web based, it can be accessed from any platform.
+There has been a lock of interactive tools to visualize catalog of mutations comprehensively. BioJS-HGV Viewer is an open source BioJS component that can be used as tool to visualize variants in a flexible manner. Thus, BioJS-HGV Viewer can be a powerful tool for visual interpretation of mutation data. Being entirely web based, it is platform independent.
 
 
 %----------------------------------------------------------------------------------------
