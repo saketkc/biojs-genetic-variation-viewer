@@ -99,9 +99,9 @@
 \noindent % \lipsum[1] % Dummy abstract text
 
 %Genomic studies have resulted in  catalogs of genetic variants in humans. 
-Studying of the pattern of genetic variants can help us understand evolution besides identifying the key driver variants that affect the well being of an individual or population. Catalogs of genetic variants are vast and lack an interactive exploratory interface.
+Studying the pattern of genetic variants can help us understand a individuals within a population, identify key \textit{'driver variants'} that affect disease states and evolution. Catalogs of genetic variants are vast but lack an interactive exploratory interface.
 
-We present BioJS-HGV Viewer, a BioJavascript component to represent and visualize genetic variants pooled from various sources. The tool displays sequences and variants at different levels facilitating representation of variant sites and annotations in a user friendly and interactive manner. 
+Here we present BioJS-HGV Viewer, a BioJavascript component to represent and visualize genetic variants pooled from various sources. The tool displays sequences and variants at different levels facilitating representation of variant sites and annotations in a user friendly and interactive manner. 
 
 The code for BioJS-HGV Viewer is available at:\\ \url{https://github.com/saketkc/biojs-genetic-variation-viewer}.
 
@@ -120,9 +120,10 @@ A demo is available at: \url{http://saketkc.github.io/biojs}
 \lettrine[nindent=0em,lines=3]{W} 
 %orem ipsum dolor sit amet, consectetur adipiscing elit.
 %\lipsum[2-3] % Dummy text
-ith the advent of next-generation sequencing technologies, it has been possible to profile genomes in large numbers. One of the chief outcomes of such projects has been catalog of genetic variants such as dbSNP\cite{Smigielski2000} and COSMIC\cite{Forbes2011}. These catalogs contain publicly accessible sets of genetic variants found in humans which can be utilized to  study evolutionary relationships and disease specific variations. COSMIC database is a curated set of somatic mutations as observed in cancer samples. The number of such variations are   huge. dbSNP 129  reportedly had more than 14 million unique variants \cite{ncbiweb}. The availability of data at such a large scale makes the analysis and interpretation challenging.
+With the advent of next-generation sequencing technologies, it has been possible to profile genomes in larger numbers. One of the chief outcomes of such projects has been the cataloguing of genetic variants in database resources such as dbSNP\cite{Smigielski2000} and Catalogue Of Somatic Mutations In Cancer (COSMIC)\cite{Forbes2011}. These catalogs contain publicly accessible sets of genetic variants found in species such as mouse, rat, zebrafish and human which can be utilized to study evolutionary relationships, population diversity and disease specific variations. The COSMIC database is a curated set of somatic mutations as observed in cancer samples. Where the current release (v70) contains 1,564,699 unique variants taken from 1,029,547 samples covering 28,735 genes.  dbSNP build 142 contains two orders of magnitude more human variants than COSMIC with 112 million refSNPs\cite{ncbiweb}. The availability of data at such a large scale makes the analysis and interpretation challenging.
 
-Any exploratory attempt at analyzing the variation data would involve visualizing the variants across the genome to determine specific sites, if any, where the mutations are more frequent or are absent completely. Thus, visualization is critical from the point of interpretation of the vast catalogs of variants. There has been though limited efforts in developing visualization registries for such databases. For example the Comic Genome Browser\cite{Forbes2011} offers limited flexibility to customize the view and present limited annotations.
+Any exploratory attempt at analyzing the variation data would involve visualizing the variants across the genome to determine specific sites, if any, where the mutations are more frequent or are absent completely. Thus, visualization is critical from the point of interpretation of the vast catalogs of variants. \textit{You don't want to piss off COSMIC they will most probably use you tool} There are variant visualization available; for example the COSMIC Genome Browser\cite{Forbes2011} offers a view with limited flexibility to customize the view and annotations for each variant.
+
 
  BioJS-HGV Viewer is a BioJS \cite{Corpas2014} component developed to visualize genetic variants in a comprehensive manner. BioJS is an open source javascript library providing various components to visualize biological data. The visualizations are web based and hence are absolutely platform independent.
  
@@ -135,7 +136,7 @@ The functionality provided by BioJS-HGV Viewer has two mode views:
 \item Overview
 \item Detailed or Zoomed View
 \end{compactitem}
-The architecture of this component is designed to handle both DNA and protein variants. The current implementation makes use of protein variants. These variant sites have been generated by an un-published webservice made available through EBI. This service has an indexed database of protein variants as reported in the COSMIC and UniProt\cite{Wu2006} database and is made available as a JSON\cite{json} file. The support for standard data formats such as VCF\cite{vcf} is being implemented.
+The architecture of this component is designed to handle both DNA and protein variants. The current implementation makes use of protein variants. These variant sites have been generated by an un-published webservice made available through EBI. This service has an indexed database of protein variants as reported in the COSMIC and UniProtKB\cite{Wu2006} database and is made available as a JSON\cite{json} file. With support for standard data formats, such as VCF,\cite{vcf} being implemented.
 
 
 
@@ -173,7 +174,7 @@ In the detailed view\ref{zoomedtooltip} each individual amino acid on the protei
 %------------------------------------------------
 
 \section{Discussion}
-There has been a lock of interactive tools to visualize catalog of mutations comprehensively. BioJS-HGV Viewer is an open source BioJS component that can be used as tool to visualize variants in a flexible manner. Thus, BioJS-HGV Viewer can be a powerful tool for visual interpretation of mutation data. Being entirely web based, it is platform independent.
+\textit{There has been a lock of interactive tools to visualize catalog of mutations comprehensively. -- What do you mean here carefully read!!} BioJS-HGV Viewer is an open source BioJS component that can be used as tool to visualize variants in a flexible manner. Thus, BioJS-HGV Viewer can be a powerful tool for visual interpretation of mutation data. Being entirely web based, it is platform independent.
 
 
 %----------------------------------------------------------------------------------------
