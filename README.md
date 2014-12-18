@@ -41,3 +41,7 @@ BioJS Component for visualising human gentic variations, GSoC2014
 
 ## Use only SIFT scores for calculating class of mutation
 ![Use only SIFT](./images/onlysift.png?raw=true “Use only SIFT”)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/saketkc/biojs-genetic-variation-viewer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
