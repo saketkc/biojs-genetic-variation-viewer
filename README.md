@@ -2,7 +2,7 @@
 BioJS Component for visualising human gentic variations, GSoC2014
 
 # Demo
-    http://saketkc.github.io/biojs-genetic-variation-viewer/
+    [http://saketkc.github.io/biojs-genetic-variation-viewer/](http://saketkc.github.io/biojs-genetic-variation-viewer/)
 
 
 # Blog
