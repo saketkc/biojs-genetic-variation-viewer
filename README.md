@@ -1,7 +1,10 @@
 # BioJS Human Genetic Variation Viewer
 BioJS Component for visualising human gentic variations, GSoC2014
 
-# Demo
+# New Version
+BioJS2 version here: https://github.com/saketkc/biojs-vis-hgv
+
+# Working Demo
 [http://saketkc.github.io/biojs-genetic-variation-viewer/](http://saketkc.github.io/biojs-genetic-variation-viewer/)
 
 
@@ -14,8 +17,6 @@ BioJS Component for visualising human gentic variations, GSoC2014
 1. It’s slooooow!
 2. Categories checkboxes[Benign/Damaging/Mixed] do not update when zooming in or zooming out
 3. Settings icon is invisible on Windows/Android etc. etc.
-
-
 
 # Screenshots
 
@@ -41,7 +42,3 @@ BioJS Component for visualising human gentic variations, GSoC2014
 
 ## Use only SIFT scores for calculating class of mutation
 ![Use only SIFT](./images/onlysift.png?raw=true “Use only SIFT”)
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/saketkc/biojs-genetic-variation-viewer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
