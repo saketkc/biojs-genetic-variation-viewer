@@ -11,6 +11,9 @@ BioJS2 version here: https://github.com/saketkc/biojs-vis-hgv
 # Blog
     http://genetic-variation-viewer-biojs.blogspot.com/
 
+# Cite
+
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.11453.svg)](http://dx.doi.org/10.5281/zenodo.11453)
 
 # Known Issues
 
