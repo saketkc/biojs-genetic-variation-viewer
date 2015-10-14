@@ -15,6 +15,8 @@ BioJS Component for visualising human gentic variations, GSoC2014
 2. Categories checkboxes[Benign/Damaging/Mixed] do not update when zooming in or zooming out
 3. Settings icon is invisible on Windows/Android etc. etc.
 
+# Cite
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.11453.svg)](http://dx.doi.org/10.5281/zenodo.11453)
 
 
 # Screenshots
