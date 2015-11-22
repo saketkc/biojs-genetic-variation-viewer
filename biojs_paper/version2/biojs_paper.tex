@@ -4,31 +4,31 @@
 %\usepackage{minted}
 %\usemintedstyle{trac}
 \usepackage{paralist}
+\usepackage[pdftex]{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,urlcolor=blue,citecolor=black,}
 \begin{document}
 \firstpage{1}
 
 \title[short Title]{BioJS-HGV Viewer: Genetic Variation Visualizer}
-\author[Choudhary \textit{et~al}]{Saket Choudhary\,$^{1}$, Leyla Garcia\,$^{2}$, Andrew Nightingale\,$^{2}$ and Maria Martin\,$^2$}
+\author[Choudhary \textit{et~al}]{Saket Choudhary\,$^{1}$, Leyla Garcia\,$^{2}$, Andrew Nightingale\,$^{2}$ and Maria Martin\,$^{2}$}
 %\footnote{to whom correspondence should be addressed}}
 \address{$^{1}$Molecular and Computational Biology, University of Southern California, Los Angeles, California, 90007, USA \\
-$^{2}$European Bioinformatics Institute EMBL-EBI, Hinxton, Cambridge, CB10 1SD, UK}
-
-\history{Received on XXXXX; revised on XXXXX; accepted on XXXXX}
-
-\editor{Associate Editor: XXXXXXX}
-
+$^{2}$European Molecular Biology laboratory - European Bioinformatics Institute (EMBL-EBI), Hinxton, Cambridge, CB10 1SD, UK}
+\history{}%Received on XXXXX; revised on XXXXX; accepted on XXXXX}
+\editor{}%Associate Editor: XXXXXXX}
 \maketitle
 
 \begin{abstract}
 
 \section{Motivation:}
-Studying the pattern of genetic variants is a primary step in deciphering the basis of biological diversity, identify key 'driver variants' that affect disease states and evolution of a species. Catalogs of genetic variants contain vast numbers of variants and are growing at an exponential rate, but lack an interactive exploratory interface.
+Studying the pattern of genetic variants is a primary step in deciphering the basis of biological diversity, identifying key `driver variants' that affect disease states and evolution of a species. Catalogs of genetic variants contain vast numbers of variants and are growing at an exponential rate, but lack an interactive exploratory interface.
 
 
 
 
 \section{Results:}
-We present BioJS-HGV Viewer, a BioJavascript component to represent and visualize genetic variants pooled from different sources. The tool displays sequences and variants at different levels of detail, facilitating representation of variant sites and annotations in a user friendly and interactive manner. 
+We present BioJS-HGV Viewer, a BioJS component to represent and visualize genetic variants pooled from different sources. The tool displays sequences and variants at different levels of detail, facilitating representation of variant sites and annotations in a user friendly and interactive manner. 
 
 
 \section{Availability:}
@@ -41,43 +41,35 @@ A demo is available at:\\ \footnotesize{\href{http://saketkc.github.io/biojs-gen
 
 \section{Introduction}
 
-With the advent of next-generation sequencing technologies, it has been possible to profile genomes in larger numbers. One of the chief outcomes of such projects has been the cataloging of genetic variants in database resources such as dbSNP (\cite{Smigielski2000}) and Catalogue Of Somatic Mutations In Cancer (COSMIC) (\cite{Forbes2011}). These catalogs contain publicly accessible sets of genetic variants found in species such as mouse, rat, zebrafish and human which can be utilized to study evolutionary relationships, population diversity and disease specific variations. The COSMIC database is a curated set of somatic mutations as observed in cancer samples.  The current release (v70) contains 1,564,699 unique variants taken from 1,029,547 samples covering 28,735 genes. dbSNP(\cite{sherry2001dbsnp}) build 142 contains two orders of magnitude more human variants than COSMIC with 112 million refSNPs. The availability of such a large amount of data makes the analysis and interpretation much more challenging.
+With the advent of next-generation sequencing technologies, it has been possible to profile genomes in larger numbers. One of the chief outcomes of such projects has been the cataloging of genetic variants in database resources such as dbSNP (\cite{Smigielski2000}) and Catalogue Of Somatic Mutations In Cancer (COSMIC) (\cite{Forbes2011}). These catalogs contain sets of genetic variants found in species such as mouse, rat, zebrafish and human which can be utilized to study evolutionary relationships, population diversity and disease specific variations. The COSMIC database is a curated set of somatic mutations as observed in cancer samples. COSMIC's release \textit{v70} contains 1,564,699 unique variants taken from 1,029,547 samples covering 28,735 genes. dbSNP(\cite{sherry2001dbsnp}) build 142 contains two orders of magnitude more human variants than COSMIC with 112 million refSNPs. The availability of such a large amount of data makes the analysis and interpretation much more challenging.
 
-Any exploratory attempt at analyzing the variation data would involve visualizing the variants across the genome to determine specific sites, if any, where the mutations are more frequent or are absent completely. Thus, visualization is critical for interpreting the vast catalogs of variants. There are various visualization tools available: COSMIC Genome Browser (\cite{Forbes2011}), for example, allows visualization of variant sites alongside the annotations. The UCSC genome browser (\cite{karolchik2003ucsc}) is another widely used visualization browser. These tools also have a server side component and offer limited flexibility when dealing with style based changes.
-
-
-BioJS-HGV Viewer is a BioJS (\cite{gomez2013biojs}) component developed to visualize genetic variants in a comprehensive manner. BioJS is an open source javascript library providing various components to visualize biological data. The visualizations are web based and hence are almost platform independent. 
-Using the component requires very limited knowledge of HTML and javascript.
+Any exploratory attempt at analyzing the variation data would involve visualizing variants across the genome to determine specific sites, if any, where the mutations are more frequent or are absent completely. Thus, visualization is critical for interpreting the vast catalogs of variants. There are various visualization tools available: COSMIC Genome Browser (\cite{Forbes2011}), for example, allows visualization of variant sites alongside the annotations. The UCSC genome browser (\cite{karolchik2003ucsc}) is another widely used visualization browser. These tools also have a server side component and offer limited flexibility when dealing with style based changes. In particular, there is limited support for visualizing variants by applying various filters, which we discuss later.
 
 
+BioJS-HGV Viewer is a BioJS (\cite{gomez2013biojs}) component developed to visualize genetic variants in a comprehensive manner. Using it requires very limited knowledge of HTML and javascript. BioJS is an open source javascript library providing various components to visualize biological data. The visualizations are web based and hence are almost platform independent. 
 
-%\section{Approach}
-
-
-
-%\begin{methods}
 \section{Methods}
+
 The functionality provided by BioJS-HGV Viewer has two mode views: 
 \begin{inparaenum}[(a)]
 	\item Overview
 	\item Detailed or Zoomed View
 \end{inparaenum}
 
-The core library of this component is designed to handle both DNA and protein variants. However, the current implementation has only been tested with protein variants. These variant sites have been generated by using a webservice provided by the Universal Protein Resource (UniProt). The webservice is still on a development stage and thus is not yet publicly available. This service has an indexed database of protein variants as reported in the COSMIC and UniProtKB (\cite{Wu2006}) database and is made available as a JSON file, with support for standard data formats, such as the Variant Call Format or VCF, (\cite{danecek2011variant}) being currently implemented.
-
-
+The core library of this component is designed to handle both DNA and protein variants. However, the current implementation has only been tested with protein variants. These variant sites have been generated by using a webservice provided by the Universal Protein Resource (UniProt). The webservice is still on a development stage and thus is not yet publicly available. This service has an indexed database of protein variants as reported in the COSMIC and UniProtKB (\cite{uniprot2014activities}) database and is made available as a JSON file, with support for standard data formats, such as the Variant Call Format or VCF, (\cite{danecek2011variant}) being currently implemented.
 
 The demo at \href{http://saketkc.github.io/biojs-genetic-variation-viewer/}{http://saketkc.github.io/biojs-genetic-variation-viewer/} loads the variants for protein \textit{J3KP33}, by default. The component however allows loading other proteins by passing an additional argument to the web address(URL). For example:\\ \href{http://saketkc.github.io/biojs-genetic-variation-viewer/?q=P00533}{http://saketkc.github.io/biojs-genetic-variation-viewer/?q=P00533}.
 
 By default, SIFT and Polyphen consequence probability are averaged and the type of mutations are then decided based on this average score. The component however allows user to choose from either or all of the consequence probability.
 
-The user can also choose to hide a particular category of mutations. Both the overview and detailed mode have another 'expanded view' where these mutations can further be separately visualized as \textit{Stop Gained}, \textit{Missense} and \textit{Splice Region}.
+The user can also choose to hide a particular category of mutations. Both the overview and detailed mode have another `expanded view' where these mutations can further be separately visualized as \textit{Stop Gained}, \textit{Missense} and \textit{Splice Region}.
 
 All the visualizations are rendered as scalable vector graphics(SVG) using the \textit{d3js} javascript library.
 
-
 \subsection{Overview Mode}
+
 In the default mode (Fig. \ref{overviewtooltip}) the viewer displays variant information in a condensed format using a stacked bar char displaying the number and \textit{type of mutations} at each site. Detailed annotations are displayed on hovering over the rectangle as a \textit{tooltip}.
+
 The \textit{type of mutations} are classified as:
 \begin{inparaenum}[(a)]
 \item {Benign} %: Mutations that do not metastasize  and are virtually harmless 
@@ -85,24 +77,21 @@ The \textit{type of mutations} are classified as:
 \item {Mixed}
 \end{inparaenum}
 
-The 'Mixed' category represents an \textbf{intermediate} state between damaging and benign.
-
+The `Mixed' category represents an \textbf{intermediate} state between damaging and benign.
 
 The classification currently uses the predictions scores of Polyphen (\cite{Ramensky2002}) and SIFT (\cite{Kumar2009}). Polyphen scores are on a scale of $[0,1]$ with $1$ indicating that the mutation is damaging and $0$ indicating the mutation being benign. SIFT scores also operate on the scale of $[0,1]$ however $0$ indicates a damaging mutation.
 The webservice has a database of all mutations across various proteins with pre-generated scores which can be retrieved as a JSON file.
 
 The data thus received is parsed for calculating the number of mutations in each category. Each category is defined by threshold levels. For example a Polyphen score between 0.75 and 1.0 can be considered to reflect a damaging mutation. These threshold levels can be modified by the user. The height of each rectangular box depicting the mutation is dynamically adjusted based on the maximum number of variants at any site.
 
-%By default, the SIFT and Polyphen scores are averaged to generate a combined prediction score. 
-
 \subsection{Detailed View}
-In the detailed view (Fig.\ref{zoomedtooltip}) each individual amino acid on the protein is displayed as a rectangular box with all variants at that site, the height of the rectangle being proportional to the reported frequency. The box for variants is colored based on its type. On a \textit{mouse over} action at the variant box, the tooltip shows detailed information about that particular mutation.
+
+In the detailed view (Fig. \ref{zoomedtooltip}) each individual amino acid on the protein is displayed as a rectangular box with all variants at that site, the height of the rectangle being proportional to the reported frequency. The box for variants is colored based on its type. On a \textit{mouse over} action at the variant box, the tooltip shows detailed information about that particular mutation.
 \begin{figure}
 \includegraphics[width=\linewidth]{images/overview_withtooltip}
+\caption{`Overview' of genetic variants as shown in by HGV viewer. Tooltips are used to display the number of mutations in benign, damaging and mixed categories.}
 \label{overviewtooltip}
-\caption{'Overview' of genetic variants as shown in by HGV viewer. Tooltips are used to display the number of mutations in benign, damaging and mixed categories.}
 \end{figure}
-
 
 \begin{figure}
 \includegraphics[width=\linewidth]{images/zoomed_withtooltip}
@@ -113,65 +102,20 @@ In the detailed view (Fig.\ref{zoomedtooltip}) each individual amino acid on the
 \subsection{Expanded View}
 
 In both the `overview' and `detailed' view, it is possible
-to visualize the variants in separate individual views arranged as `Stop Gained', `Missense' and `Spliced Region' variants. This provides a quick view of the distribution of different variant types. It is possible to easily switch between all the three views.
-
-%\begin{figure}
-%\vspace*{.5in}
-%\begin{minted}{json}
-%{
-%"id":"P00533_variant226",
-%"sourceIds":["COSM1090877","COSM1090879"],
-%"position":541,
-%"wild_type":"L",
-%"mutation":"I",
-%"frequency":0.0,
-%"polyphenPrediction":"benign",
-%"polyphenScore":0.0,
-%"siftPrediction":"tolerated",
-%"siftScore":0.86,
-%"somaticStatus":1,
-%"consequenceTypes":"missense variant",
-%"cytogeneticBand":"7p11.2",
-%"genomicLocation":"7:g.55229314C>A"
-%}
-%\end{minted}
-%\caption{The data is organized in JSON format}
-%\label{dataformat}
-%\end{figure}
-%\end{methods}
-
+to visualize the variants in separate individual views arranged as `Stop Gained', `Missense' and `Spliced Region' variants. This provides a quick view of the distribution of different variant types. It is possible to easily switch between all the three views.\\
 
 
 \section{Discussion}
 
- BioJS-HGV Viewer is an open source BioJS component that can be used as tool to visualize variants in a flexible manner. It can run entirely on the client side and hence can be used across various platforms. It can serve as a visual aid for studying the distribution of various types of mutations in DNA
- or amino acid sequences.
- 
- The visualization provided can be the first step towards discovering more meaningful patterns in biological data. 
+BioJS-HGV Viewer is an open source BioJS component that can be used as tool to visualize variants in a flexible manner. It can run entirely on the client side and hence can be used across various platforms. 
 
+The ability to visualize variants  based on their categories \textit{Benign, Damaging} or \textit{Mixed} and apply further filters based on the mutation being \textit{Stop Gained, Missense} or \textit{Splice Region} is a unique feature.
 
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     please remove the " % " symbol from \centerline{\includegraphics{fig01.eps}}
-%     as it may ignore the figures.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-%\section{Conclusion}
-
-
+The visualization provided by BioJS-Viewer can be the first step towards discovering more meaningful patterns in biological data. It can serve as a visual aid for studying the distribution of various types of mutations in DNA  or amino acid sequences before performing detailed analysis.
 
 \section*{Acknowledgment}
-We would like to thank the BioJS community for insightful discussions.
+
+We thank the Google Summer of Code like and the BioJS community for supporting the original work.
 
 
 \paragraph{Funding\textcolon} S.C. was funded by the Google Summer of Code 2014 program sponsored by Google Inc.
