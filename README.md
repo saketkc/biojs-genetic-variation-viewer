@@ -13,7 +13,9 @@ BioJS2 version here: https://github.com/saketkc/biojs-vis-hgv
 
 # Cite
 
-Choudhary, Saket, et al. "BioJS-HGV Viewer: Genetic Variation Visualizer." bioRxiv (2015): 032573.[pdf](http://www.biorxiv.org/content/biorxiv/early/2015/11/23/032573.full.pdf)
+Choudhary, Saket, et al. "BioJS-HGV Viewer: Genetic Variation Visualizer." bioRxiv (2015): 032573.
+[pdf](http://www.biorxiv.org/content/biorxiv/early/2015/11/23/032573.full.pdf)
+
 # Known Issues
 
 1. It’s slooooow!
